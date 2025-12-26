@@ -28,5 +28,13 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+
+# Build artifacts
+build/
+libschema.so
+**/node_modules/
+
+# Generated release notes
+RELEASE_NOTES.md

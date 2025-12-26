@@ -1,0 +1,128 @@
+version: 2
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  # Linux AMD64 shared library
+  - id: libschema-linux-amd64
+    main: ./cmd/libschema
+    binary: libschema
+    env:
+      - CGO_ENABLED=1
+      - CC=gcc
+    goos:
+      - linux
+    goarch:
+      - amd64
+    flags:
+      - -buildmode=c-shared
+    ldflags:
+      - -s -w
+
+  # Linux ARM64 shared library
+  - id: libschema-linux-arm64
+    main: ./cmd/libschema
+    binary: libschema
+    env:
+      - CGO_ENABLED=1
+      - CC=aarch64-linux-gnu-gcc
+    goos:
+      - linux
+    goarch:
+      - arm64
+    flags:
+      - -buildmode=c-shared
+    ldflags:
+      - -s -w
+
+  # macOS AMD64 shared library
+  - id: libschema-darwin-amd64
+    main: ./cmd/libschema
+    binary: libschema
+    env:
+      - CGO_ENABLED=1
+      - CC=o64-clang
+    goos:
+      - darwin
+    goarch:
+      - amd64
+    flags:
+      - -buildmode=c-shared
+    ldflags:
+      - -s -w
+
+  # macOS ARM64 shared library
+  - id: libschema-darwin-arm64
+    main: ./cmd/libschema
+    binary: libschema
+    env:
+      - CGO_ENABLED=1
+      - CC=oa64-clang
+    goos:
+      - darwin
+    goarch:
+      - arm64
+    flags:
+      - -buildmode=c-shared
+    ldflags:
+      - -s -w
+
+  # Windows AMD64 shared library
+  - id: libschema-windows-amd64
+    main: ./cmd/libschema
+    binary: libschema
+    env:
+      - CGO_ENABLED=1
+      - CC=x86_64-w64-mingw32-gcc
+    goos:
+      - windows
+    goarch:
+      - amd64
+    flags:
+      - -buildmode=c-shared
+    ldflags:
+      - -s -w
+
+archives:
+  - id: default
+    format: tar.gz
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- .Version }}_
+      {{- .Os }}_
+      {{- .Arch }}
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - README.md
+      - LICENSE
+      - src: "dist/libschema-{{ .Os }}-{{ .Arch }}/libschema.h"
+        dst: libschema.h
+        strip_parent: true
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^ci:'
+      - '^chore:'
+      - '^build:'
+
+release:
+  github:
+    owner: gremllm
+    name: schema
+  draft: false
+  prerelease: auto
+  name_template: "Release {{.Tag}}"

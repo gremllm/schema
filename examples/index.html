@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="llm-markdown" content="available" />
+    <title>Sample Page - LLM Schema Test</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to the LLM Schema Test Site</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Introduction</h2>
+            <p>This is a sample HTML page designed to test the LLM Schema middleware. The middleware should be able to serve this content in two ways:</p>
+
+            <ul>
+                <li><strong>As HTML</strong>: When you visit <code>/index.html</code></li>
+                <li><strong>As optimized content</strong>: When you visit <code>/index.md</code></li>
+            </ul>
+
+            <h3>Features</h3>
+            <p>The LLM Schema project aims to provide:</p>
+            <ol>
+                <li>Token-optimized content for LLMs (50-80% reduction)</li>
+                <li>Semantic preservation of meaning</li>
+                <li>Framework-agnostic middleware</li>
+                <li>Easy adoption for site owners</li>
+            </ol>
+
+            <h3>Code Example</h3>
+            <pre><code>func Convert(html string) string {
+    // Convert HTML to LLM-optimized markdown
+    return markdown
+}</code></pre>
+        </article>
+
+        <aside>
+            <h4>Newsletter Signup</h4>
+            <p>Subscribe to our newsletter for updates!</p>
+            <form>
+                <input type="email" placeholder="your@email.com" />
+                <button type="submit">Subscribe</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LLM Schema Project. All rights reserved.</p>
+        <p>Contact: hello@example.com</p>
+    </footer>
+
+    <script>
+        console.log('This is client-side JavaScript that LLMs cannot execute');
+    </script>
+</body>
+</html>
