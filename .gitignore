@@ -38,3 +38,7 @@ libschema.so
 
 # Generated release notes
 RELEASE_NOTES.md
+bakes/
+.mcp.json
+fast.yaml
+gremllm-server
