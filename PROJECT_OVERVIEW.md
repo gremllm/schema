@@ -397,7 +397,7 @@ Returns: Optimized markdown with product details
 #### How It Works
 
 ```
-schema/
+lib/
 ├── cmd/
 │   └── libschema/    CGO build target
 ├── internal/
@@ -414,7 +414,7 @@ package main
 
 import "C"
 import (
-    "github.com/gremllm/schema/internal/converter"
+    "github.com/gremllm/lib/internal/converter"
 )
 
 //export Convert

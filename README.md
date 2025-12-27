@@ -1,7 +1,7 @@
 # LLM Schema
 
-[![Tests](https://github.com/gremllm/schema/actions/workflows/test.yml/badge.svg)](https://github.com/gremllm/schema/actions/workflows/test.yml)
-[![Release](https://github.com/gremllm/schema/actions/workflows/release.yml/badge.svg)](https://github.com/gremllm/schema/actions/workflows/release.yml)
+[![Tests](https://github.com/gremllm/lib/actions/workflows/test.yml/badge.svg)](https://github.com/gremllm/lib/actions/workflows/test.yml)
+[![Release](https://github.com/gremllm/lib/actions/workflows/release.yml/badge.svg)](https://github.com/gremllm/lib/actions/workflows/release.yml)
 
 A Go middleware for serving LLM-optimized versions of web content. Instead of forcing LLMs to parse verbose HTML with navigation, ads, and boilerplate, websites can serve token-minimized markdown versions at `.md` URLs.
 
@@ -22,7 +22,7 @@ A Go middleware for serving LLM-optimized versions of web content. Instead of fo
 ## Project Structure
 
 ```
-schema/
+lib/
 ├── cmd/
 │   ├── server/          # Example HTTP server for testing
 │   └── libschema/       # CGO library for cross-language support
@@ -54,7 +54,7 @@ package main
 
 import (
     "net/http"
-    "github.com/gremllm/schema/internal/middleware"
+    "github.com/gremllm/lib/internal/middleware"
 )
 
 func main() {

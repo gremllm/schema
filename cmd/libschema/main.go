@@ -7,7 +7,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/gremllm/schema/internal/converter"
+	"github.com/gremllm/lib/internal/converter"
 )
 
 //export Convert

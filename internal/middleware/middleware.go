@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gremllm/schema/internal/converter"
+	"github.com/gremllm/lib/internal/converter"
 )
 
 // responseWriter is a wrapper around http.ResponseWriter that captures the response

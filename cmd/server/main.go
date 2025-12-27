@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gremllm/schema/internal/middleware"
+	"github.com/gremllm/lib/internal/middleware"
 )
 
 func main() {
