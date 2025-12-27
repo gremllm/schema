@@ -58,7 +58,7 @@ func ProcessScripts(n *html.Node) {
 		for _, item := range toReplace {
 			textNode := &html.Node{
 				Type: html.TextNode,
-				Data: "There's some javascript that has the following description: " + item.desc,
+				Data: "Javascript description: " + item.desc,
 			}
 			parent.InsertBefore(textNode, item.node)
 			parent.RemoveChild(item.node)

@@ -49,7 +49,7 @@ func GremllmMiddleware(next http.Handler) http.Handler {
 			// Capture the response
 			rw := newResponseWriter(w)
 
-			// Call the next handler
+			// Call the next handler (which will serve the HTML)
 			next.ServeHTTP(rw, r)
 
 			// Only process successful HTML responses
@@ -73,6 +73,7 @@ func GremllmMiddleware(next http.Handler) http.Handler {
 			// Process the HTML
 			processed, err := converter.ProcessHTML(rw.body.Bytes(), converter.StripConfig{})
 			if err != nil {
+				// If processing fails, return the original HTML
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
 			}
