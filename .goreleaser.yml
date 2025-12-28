@@ -43,7 +43,7 @@ builds:
     binary: libschema
     env:
       - CGO_ENABLED=1
-      - CC=o64-clang
+      - CC=clang
     goos:
       - darwin
     goarch:
@@ -59,7 +59,7 @@ builds:
     binary: libschema
     env:
       - CGO_ENABLED=1
-      - CC=oa64-clang
+      - CC=clang
     goos:
       - darwin
     goarch:
