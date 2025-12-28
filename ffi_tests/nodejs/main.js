@@ -50,7 +50,7 @@ if (!result.includes('<footer>')) {
     errors++;
 }
 
-if (result.includes('<main>')) {
+if (result.includes('This content should remain')) {
     console.log('✓ Main content preserved')
 } else {
     console.log('✗ Main content missing')

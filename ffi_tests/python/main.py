@@ -53,7 +53,7 @@ else:
     print("✗ Footer tag still present")
     failures += 1
 
-if b'<main>' in result_str.encode():
+if b'This content should remain' in result_str.encode():
     print("✓ Main content preserved")
 else:
     print("✗ Main content missing")

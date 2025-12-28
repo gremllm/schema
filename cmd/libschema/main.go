@@ -10,7 +10,6 @@ import (
 	"github.com/gremllm/lib/internal/converter"
 )
 
-//export Convert
 // Convert processes HTML with optional element stripping configuration.
 //
 // IMPORTANT: The function signature uses **C.char and C.int instead of []*C.char because
@@ -22,6 +21,8 @@ import (
 // The correct pattern for passing arrays through CGO is to pass the array pointer
 // (as **C.char) and its length (as C.int) separately, then use unsafe.Slice to convert
 // to a Go slice inside the function.
+//
+//export Convert
 func Convert(htmlInput *C.char, elementsToStrip **C.char, elementsLen C.int) *C.char {
 	if htmlInput == nil {
 		return C.CString("")
@@ -52,7 +53,12 @@ func Convert(htmlInput *C.char, elementsToStrip **C.char, elementsLen C.int) *C.
 		return C.CString(goHTML)
 	}
 
-	return C.CString(string(processed))
+	md, err := converter.HTMLToMarkdown(processed, stripConfig)
+	if err != nil {
+		return C.CString(goHTML)
+	}
+
+	return C.CString(md)
 }
 
 //export Free
