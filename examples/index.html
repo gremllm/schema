@@ -317,6 +317,210 @@
 }</code></pre>
                 </div>
             </section>
+
+            <!-- HTML Tag Examples -->
+            <section class="mb-20">
+                <h3 class="font-serif text-3xl text-ink mb-4">HTML Tag Examples</h3>
+                <p class="text-neutral-500 mb-8">Comprehensive examples of all supported HTML tags and their markdown conversions.</p>
+
+                <!-- Inline Formatting -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Inline Formatting</h4>
+                    <div class="bg-white border border-stone p-6 space-y-3">
+                        <p><strong>Bold text</strong> and <b>also bold</b> using strong/b tags</p>
+                        <p><em>Italic text</em> and <i>also italic</i> using em/i tags</p>
+                        <p><del>Deleted text</del> and <s>strikethrough</s> using del/s tags</p>
+                        <p><ins>Inserted text</ins> using ins tag</p>
+                        <p><u>Underlined text</u> using u tag</p>
+                        <p><mark>Highlighted text</mark> using mark tag</p>
+                        <p><small>Small text</small> using small tag</p>
+                        <p>Keyboard input: Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy</p>
+                        <p>Sample output: <samp>Error: File not found</samp></p>
+                        <p>Variable: The value of <var>x</var> is 42</p>
+                        <p>Definition: <dfn>Gremllm</dfn> is an LLM optimization library</p>
+                        <p>Citation: <cite>The Art of Computer Programming</cite> by Knuth</p>
+                        <p>Inline quote: She said <q>Hello, world!</q></p>
+                        <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr> is great</p>
+                        <p>Subscript: H<sub>2</sub>O is water</p>
+                        <p>Superscript: E=mc<sup>2</sup> is famous</p>
+                    </div>
+                </div>
+
+                <!-- Blockquote -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Blockquote</h4>
+                    <blockquote class="border-l-4 border-ink pl-6 py-2 bg-stone/30">
+                        <p class="text-lg italic text-ink">"The best way to predict the future is to invent it."</p>
+                        <footer class="text-sm text-neutral-500 mt-2">— Alan Kay</footer>
+                    </blockquote>
+                </div>
+
+                <!-- Description List -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Description List</h4>
+                    <dl class="bg-white border border-stone p-6 space-y-4">
+                        <dt class="font-medium text-ink">HTML</dt>
+                        <dd class="text-neutral-600 ml-4">HyperText Markup Language for structuring web content</dd>
+                        <dt class="font-medium text-ink">CSS</dt>
+                        <dd class="text-neutral-600 ml-4">Cascading Style Sheets for styling web pages</dd>
+                        <dt class="font-medium text-ink">JavaScript</dt>
+                        <dd class="text-neutral-600 ml-4">Programming language for interactive web functionality</dd>
+                    </dl>
+                </div>
+
+                <!-- Details/Summary -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Details/Summary</h4>
+                    <details class="bg-white border border-stone p-6">
+                        <summary class="font-medium text-ink cursor-pointer">Click to expand this section</summary>
+                        <p class="mt-4 text-neutral-600">This is the hidden content that appears when you expand the details element. It's great for FAQs, accordion menus, and progressive disclosure.</p>
+                    </details>
+                </div>
+
+                <!-- Lists -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Lists</h4>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white border border-stone p-6">
+                            <p class="text-xs tracking-[0.15em] uppercase text-neutral-400 mb-3">Unordered List</p>
+                            <ul class="list-disc list-inside space-y-1 text-neutral-600">
+                                <li>First item</li>
+                                <li>Second item</li>
+                                <li>Third item</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white border border-stone p-6">
+                            <p class="text-xs tracking-[0.15em] uppercase text-neutral-400 mb-3">Ordered List</p>
+                            <ol class="list-decimal list-inside space-y-1 text-neutral-600">
+                                <li>First step</li>
+                                <li>Second step</li>
+                                <li>Third step</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Table</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse bg-white border border-stone">
+                            <caption class="text-sm text-neutral-500 mb-2">Programming Language Comparison</caption>
+                            <thead>
+                                <tr class="bg-stone/50">
+                                    <th class="border border-stone px-4 py-2 text-left font-medium text-ink">Language</th>
+                                    <th class="border border-stone px-4 py-2 text-left font-medium text-ink">Year</th>
+                                    <th class="border border-stone px-4 py-2 text-left font-medium text-ink">Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-stone px-4 py-2">Go</td>
+                                    <td class="border border-stone px-4 py-2">2009</td>
+                                    <td class="border border-stone px-4 py-2">Compiled</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-stone px-4 py-2">Python</td>
+                                    <td class="border border-stone px-4 py-2">1991</td>
+                                    <td class="border border-stone px-4 py-2">Interpreted</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-stone px-4 py-2">Rust</td>
+                                    <td class="border border-stone px-4 py-2">2015</td>
+                                    <td class="border border-stone px-4 py-2">Compiled</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Address</h4>
+                    <address class="bg-white border border-stone p-6 not-italic text-neutral-600">
+                        <strong class="text-ink">Gremllm HQ</strong><br>
+                        123 Developer Lane<br>
+                        San Francisco, CA 94102<br>
+                        <a href="mailto:contact@gremllm.dev" class="text-ink underline">contact@gremllm.dev</a>
+                    </address>
+                </div>
+
+                <!-- Time -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Time Element</h4>
+                    <p class="bg-white border border-stone p-6 text-neutral-600">
+                        This project was started on <time datetime="2024-01-15">January 15, 2024</time> and
+                        the next release is scheduled for <time datetime="2025-02-01T10:00">February 1st, 2025 at 10:00 AM</time>.
+                    </p>
+                </div>
+
+                <!-- Media -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Media Elements</h4>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white border border-stone p-6">
+                            <p class="text-xs tracking-[0.15em] uppercase text-neutral-400 mb-3">Video</p>
+                            <video src="demo.mp4" controls class="w-full bg-neutral-800 h-32 flex items-center justify-center">
+                                Your browser does not support video.
+                            </video>
+                            <p class="text-sm text-neutral-500 mt-2">Converts to: [Video: demo.mp4]</p>
+                        </div>
+                        <div class="bg-white border border-stone p-6">
+                            <p class="text-xs tracking-[0.15em] uppercase text-neutral-400 mb-3">Audio</p>
+                            <audio src="podcast.mp3" controls class="w-full">
+                                Your browser does not support audio.
+                            </audio>
+                            <p class="text-sm text-neutral-500 mt-2">Converts to: [Audio: podcast.mp3]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ruby Annotations -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Ruby Annotations</h4>
+                    <p class="bg-white border border-stone p-6 text-neutral-600 text-xl">
+                        Japanese: <ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp>字<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>
+                        means "Chinese characters"
+                    </p>
+                </div>
+
+                <!-- Horizontal Rule -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Horizontal Rule</h4>
+                    <div class="bg-white border border-stone p-6">
+                        <p class="text-neutral-600">Content above the line</p>
+                        <hr class="my-4 border-stone">
+                        <p class="text-neutral-600">Content below the line</p>
+                    </div>
+                </div>
+
+                <!-- Skipped Elements -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">Skipped Elements</h4>
+                    <p class="text-neutral-500 mb-4">These elements produce no output in markdown (canvas, embed, object):</p>
+                    <div class="bg-white border border-stone p-6">
+                        <canvas id="demo-canvas" width="200" height="50" class="bg-neutral-100 border border-stone"></canvas>
+                        <p class="text-sm text-neutral-500 mt-2">Canvas elements are skipped entirely</p>
+                    </div>
+                </div>
+
+                <!-- data-llm Attributes -->
+                <div class="mb-12">
+                    <h4 class="font-serif text-2xl text-ink mb-4">data-llm Attributes</h4>
+                    <p class="text-neutral-500 mb-4">Control what content LLMs see:</p>
+                    <div class="space-y-4">
+                        <div class="bg-white border border-stone p-6">
+                            <p class="text-xs tracking-[0.15em] uppercase text-neutral-400 mb-2">data-llm="keep"</p>
+                            <nav data-llm="keep" class="text-neutral-600">This nav would normally be stripped, but data-llm="keep" preserves it</nav>
+                        </div>
+                        <div class="bg-white border border-stone p-6">
+                            <p class="text-xs tracking-[0.15em] uppercase text-neutral-400 mb-2">data-llm="drop"</p>
+                            <div data-llm="drop" class="text-neutral-600 p-4 bg-red-50 border border-red-200">This entire div is hidden from LLMs (including decorative elements, ads, etc.)</div>
+                            <p class="text-sm text-neutral-500 mt-2">The red box above won't appear in ?gremllm output</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </article>
 
         <!-- Newsletter -->
